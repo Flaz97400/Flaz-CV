@@ -1,0 +1,70 @@
+@import url('tooltip.css');
+@import url('experience_style.css');
+@import url('education_style.css');
+@import url('skill_style.css');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700|Droid+Sans|Open+Sans:400,600,700');
+.section_cv_content {
+    /*font-size: 0px;*/
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+    width: 100%;
+    /*border: 1px dashed whitesmoke;*/
+    display: block;
+    position: relative;
+}
+
+.div_cv_content {
+    position: absolute;
+    margin-top: 150px;
+    width: calc( 100vw - 60px);
+    max-height: calc(95vh - 150px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*font-size: 0px;*/
+}
+
+.Content_title {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    line-height: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    width: 40px;
+    overflow: visible;
+    height: 85vh;
+}
+
+.Content_title img {
+    position: absolute;
+    top: calc(85vh - 50px);
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    /*border-radius: 30px;
+    border: 3px solid white;*/
+    z-index: 2;
+}
+
+.Content_title p {
+    position: relative;
+    top: calc(85vh - 100px);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+#div_educ_title {
+    background: #00a1f1;
+}
+
+#div_exp_title {
+    background: #7cbb00;
+}
+
+#div_skills_title {
+    background: #f65314;
+}

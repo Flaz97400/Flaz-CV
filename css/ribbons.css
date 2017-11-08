@@ -1,0 +1,169 @@
+    /******************************************** Ribbons */
+    
+    .ribbon {
+        position: relative;
+        left: -10px;
+        top: 10px;
+        width: 75%;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'Raleway', sans-serif;
+        line-height: 36px;
+        height: 36px;
+    }
+    
+    .ribbon::before {
+        content: "";
+        height: 0px;
+        width: 0px;
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: -35px;
+        border-top: 36px solid rgba(0, 0, 0, .3);
+        border-right: 36px solid transparent;
+    }
+    
+    .ribbon a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -35px;
+        top: 0px;
+        height: 0px;
+        width: 0px;
+        /*border-top: 30px solid #2672EC;*/
+        border-right: 36px solid transparent;
+    }
+    
+    .ribbon a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 36px;
+        height: 0;
+        width: 0;
+        /*border-top: 15px solid #004a70;*/
+        border-left: 9px solid transparent;
+    }
+    
+    .ribbon::after {
+        content: "";
+        height: 3px;
+        background: rgba(0, 0, 0, .3);
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 15px;
+        right: 1px;
+    }
+    
+    .ribbon a {
+        color: #fff;
+        text-decoration: none;
+        /*border: 1px dashed green;*/
+        vertical-align: middle;
+        margin-left: 80px;
+        z-index: 2;
+    }
+    
+    #ribbon_education {
+        background: #00a1f1;
+    }
+    
+    #ribbon_education a::before {
+        border-top: 36px solid #00a1f1;
+    }
+    
+    #ribbon_education a::after {
+        border-top: 10px solid #006699;
+    }
+    
+    #ribbon_experiences {
+        background: #7cbb00;
+    }
+    
+    #ribbon_experiences a::before {
+        border-top: 36px solid #7cbb00;
+    }
+    
+    #ribbon_experiences a::after {
+        border-top: 10px solid #446600;
+    }
+    
+    #ribbon_profile {
+        background: #ffbb00;
+    }
+    
+    #ribbon_profile a::before {
+        border-top: 36px solid #ffbb00;
+    }
+    
+    #ribbon_profile a::after {
+        border-top: 10px solid #997000;
+    }
+    
+    #ribbon_skills {
+        background: #f65314;
+    }
+    
+    #ribbon_skills a::before {
+        border-top: 36px solid #f65314;
+    }
+    
+    #ribbon_skills a::after {
+        border-top: 10px solid #ac3506;
+    }
+    
+    .img_ribbon {
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        border: 3px solid white;
+        position: absolute;
+        top: -10px;
+        left: 15px;
+        z-index: 2;
+    }
+    
+    @media screen and (max-width: 1549px) {
+        .img_ribbon {
+            width: 40px;
+            height: 40px;
+            border-radius: 25px;
+            border: 3px solid white;
+            position: absolute;
+            top: -5px;
+            left: 15px;
+            z-index: 2;
+        }
+        .ribbon {
+            position: relative;
+            left: -10px;
+            top: 10px;
+            width: 75%;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            line-height: 36px;
+            height: 36px;
+        }
+    }
+    
+    #img_ribbon_education {
+        background: #00a1f1;
+    }
+    
+    #img_ribbon_experiences {
+        background: #7cbb00;
+    }
+    
+    #img_ribbon_profile {
+        background: #ffbb00;
+    }
+    
+    #img_ribbon_skills {
+        background: #f65314;
+    }

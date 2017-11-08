@@ -1,0 +1,443 @@
+@import url('timeline.css');
+@import url('ribbons.css');
+@import url('cv_content_style.css');
+body {
+    font-size: 0;
+    padding: 0px;
+    background-color: LightGray;
+    z-index: -2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+h1 {
+    font-size: x-large;
+    color: #999;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    font-size: large;
+    color: #999;
+    font-family: 'Raleway', sans-serif;
+}
+
+#main_content {
+    display: inline-block;
+    width: 84.5%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0;
+}
+
+section {
+    display: inline-block;
+    overflow: visible;
+    border: 1px dashed blueviolet;
+    position: relative;
+    vertical-align: bottom;
+    height: 95vh;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+article {
+    font-size: medium;
+    color: #999;
+    font-family: 'Raleway', sans-serif;
+    border: 1px dashed cyan;
+    overflow: visible;
+    margin: 10px;
+}
+
+div {
+    /*border: 1px dashed orange;*/
+    overflow: visible;
+}
+
+
+/******************************************** contacts -  hobbies*/
+
+#section_contact_hobbies {
+    width: 15%;
+    min-width: 280px;
+    background-color: gray;
+    z-index: 2;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0;
+}
+
+.contact_icon {
+    color: whitesmoke;
+}
+
+
+/*#div_experience_profile,*/
+
+#div_contact_hobbies {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#article_contact,
+#article_hobbies {
+    border-left: 1px solid #333333;
+    border-right: 1px solid #333333;
+}
+
+#article_contact li {
+    margin-bottom: 10px;
+    color: #484848;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#article_hobbies p {
+    text-align: center;
+}
+
+#article_hobbies img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: Gainsboro;
+    border-radius: 25px;
+    border: 2px solid #484848;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/*************************ribbon small */
+
+.ribbon_small {
+    position: relative;
+    left: -10px;
+    top: 10px;
+    width: calc(100% + 20px);
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    line-height: 36px;
+    height: 36px;
+    background: #484848;
+}
+
+.ribbon_small a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 36px;
+    height: 0;
+    width: 0;
+    border-top: 10px solid #333333;
+    border-left: 10px solid transparent;
+}
+
+.ribbon_small a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 36px;
+    right: 0px;
+    height: 0;
+    width: 0;
+    border-top: 10px solid #333333;
+    border-right: 10px solid transparent;
+}
+
+
+/* Shadow line bottom ribbon */
+
+.ribbon_small::after {
+    content: "";
+    height: 3px;
+    background: rgba(0, 0, 0, .3);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 9px;
+    right: 9px;
+}
+
+.ribbon_small a {
+    color: #fff;
+    text-decoration: none;
+    vertical-align: middle;
+    margin-left: 80px;
+}
+
+
+/********************************************  Education */
+
+#section_education {
+    /*width: 22vw;*/
+    width: 33%;
+    background-color: #484848;
+    z-index: 1;
+}
+
+#article_education {
+    position: absolute;
+    height: 50vh;
+    bottom: 10vh;
+    border-left: 1px solid #006699;
+}
+
+.timeline_year {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 20px;
+    color: #999;
+}
+
+#section_education strong {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #E0E0E0;
+}
+
+
+/********************************************  Experiences - Profiles */
+
+#section_experience_profile_skill {
+    /*width: 55vw;*/
+    width: 66%;
+    background-color: #484848;
+    z-index: 1;
+}
+
+#div_experience_profile_skill {
+    position: absolute;
+    bottom: 5px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#article_profile,
+#article_experiences {
+    display: inline-block;
+    vertical-align: bottom;
+    /*border: 1px dashed green;*/
+    /*width: 25vw;*/
+    width: 50%;
+    height: 40vh;
+}
+
+#article_profile {
+    margin-bottom: 15vh;
+    border-left: 1px solid #997000;
+}
+
+#article_experiences {
+    margin-bottom: 5vh;
+    border-left: 1px solid #446600;
+}
+
+#time_experiences img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+#time_experiences p {
+    /*display: inline-block;*/
+    line-height: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/******************************************** Skills */
+
+#article_skills {
+    position: relative;
+    border-left: 1px solid #ac3506;
+    /*width: 52vw;*/
+    width: 100%;
+}
+
+.img_skill {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: Gainsboro;
+    border-radius: 25px;
+    border: 2px solid gray;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#msg_skills,
+#progwin_skills,
+#envBdd_skills,
+#progwin_skills,
+#progweb_skills {
+    display: inline-block;
+    margin: 5px;
+}
+
+#div_article_skills {
+    position: relative;
+}
+
+#english_skills {
+    position: absolute;
+    display: inline-block;
+    bottom: 5px;
+    right: 5px;
+}
+
+#img_english {
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle;
+}
+
+
+/******************************************** Photo - ID*/
+
+#section_photo_name {
+    position: absolute;
+    overflow: visible;
+    left: calc(15vw - 70px);
+    top: 75px;
+    z-index: 3;
+    height: auto;
+}
+
+#img_photoid {
+    position: fixed;
+    top: 50px;
+    left: calc(15vw - 125px + 80px);
+    width: 125px;
+    height: 125px;
+    z-index: 4;
+    border-radius: 64px;
+    border: 4px solid whitesmoke;
+}
+
+.main_ribbon {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    font-size: 24px;
+    font-weight: x-large;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 26px;
+    color: white;
+    line-height: 60px;
+    height: 60px;
+    background: #636d7c;
+    display: inline-block;
+}
+
+.main_ribbon a {
+    display: inline-block;
+    padding-left: 200px;
+    margin-right: 25px;
+}
+
+.main_ribbon:before,
+.main_ribbon:after {
+    content: '.';
+    text-indent: -9999em;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 30px;
+    position: absolute;
+    left: -56px;
+    /*top: 10px;*/
+    display: block;
+    /*z-index: 3;*/
+}
+
+.main_ribbon:before {
+    border-color: #636d7c #636d7c #636d7c transparent;
+    /*bg color for left side of ribbon */
+}
+
+.main_ribbon:after {
+    border-color: transparent transparent transparent #636d7c;
+    /* bg color for right side of ribbon */
+    right: -58px;
+    top: 0;
+    left: auto;
+}
+
+#time_education li:before {
+    background: none repeat scroll 0% 0% #00a1f1;
+}
+
+#time_experiences li:before {
+    background: none repeat scroll 0% 0% #7cbb00;
+}
+
+
+/****************************************************************************/
+
+#skills_content,
+#experiences_content,
+#education_content {
+    width: 77vw;
+    height: 95vh;
+    color: white;
+    position: absolute;
+    background-color: #000;
+    box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /*-webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;*/
+}
+
+#skills_content,
+#experiences_content,
+#education_content {
+    width: 80vw;
+    height: 95vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#skills_content {
+    background-color: #ac3506;
+    left: 16vw;
+    top: 200vh;
+    /*display: none;*/
+}
+
+#experiences_content {
+    background-color: #446600;
+    left: 16vw;
+    top: -102vh;
+    /*display: none;*/
+}
+
+#education_content {
+    background-color: #006699;
+    left: -102vw;
+    top: 18px;
+    /*display: none;*/
+}
+
+
+/*#skills_content:target,
+#experiences_content:target,
+#education_content:target {
+    left: 16vw;
+    top: 18px;
+}*/

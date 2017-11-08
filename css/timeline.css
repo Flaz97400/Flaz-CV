@@ -1,0 +1,169 @@
+/******************************************** Time List*/
+
+.timeline-list {
+    /*border-left: 5px solid #ccc;*/
+    padding-bottom: 1em;
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* time line */
+
+.timeline-list::before {
+    content: "";
+    position: absolute;
+    border-left: 5px solid #CCC;
+    left: 1.8em;
+    top: 1.3em;
+    bottom: 1.3em;
+    transform-origin: 0 0;
+    animation: scaleVertical 3s 1s ease both 1;
+}
+
+
+/* timeline end Dot */
+
+.timeline-list::after {
+    content: "";
+    clear: both;
+    position: absolute;
+    bottom: 0px;
+    left: 1.1em;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: none repeat scroll 0% 0% #DDD;
+    border: 5px solid #DDD;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    animation: revealScaleUp 0.75s 2.82s ease both 1;
+}
+
+.timeline-list li:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -24px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    animation: revealScaleUp 0.75s 0s ease both 1;
+}
+
+#time_experiences li:before {
+    top: 10px;
+}
+
+.timeline-list li {
+    /*margin: 0 0 2.5em 0;
+    padding: 0 2em 0em 1.7em;*/
+    margin: 0 0 2em 0;
+    padding: 0 1.5em 0em 1.4em;
+    position: relative;
+}
+
+@media screen and (max-width: 1549px) {
+    #time_experiences li:before {
+        top: 5px;
+    }
+    /* timeline end Dot */
+    .timeline-list::after {
+        bottom: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        left: 1.3em;
+    }
+    .timeline-list li {
+        margin: 0 0 1.7em 0;
+        padding: 0 1.5em 0em 1.4em;
+        position: relative;
+    }
+}
+
+.timeline-list {
+    animation: reveal 2s 0 ease both 1;
+}
+
+.timeline-list li .content {
+    display: inline-block;
+    animation: revealFromLeft 0.5s 0s ease both 1;
+}
+
+.timeline-list li:nth-child(1):before {
+    animation-delay: 0.85s;
+}
+
+.timeline-list li:nth-child(1) .content {
+    animation-delay: 1.05s;
+}
+
+.timeline-list li:nth-child(2):before {
+    animation-delay: 1.2s;
+}
+
+.timeline-list li:nth-child(2) .content {
+    animation-delay: 1.5s;
+}
+
+.timeline-list li:nth-child(3):before {
+    animation-delay: 1.8s;
+}
+
+.timeline-list li:nth-child(3) .content {
+    animation-delay: 2.1s;
+}
+
+.timeline-list li:nth-child(4):before {
+    animation-delay: 2s;
+}
+
+.timeline-list li:nth-child(4) .content {
+    animation-delay: 2.3s;
+}
+
+.timeline-list li:nth-child(5):before {
+    animation-delay: 2.6s;
+}
+
+.timeline-list li:nth-child(5) .content {
+    animation-delay: 2.9s;
+}
+
+@keyframes revealFromLeft {
+    0% {
+        transform: translateX(-1em);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleVertical {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes revealScaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}

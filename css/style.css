@@ -1,0 +1,615 @@
+    @import url('timeline.css');
+    @import url('ribbons.css');
+    @import url('cv_content_style.css');
+    html,
+    body {
+        position: relative;
+        font-size: 0;
+        padding: 0px;
+        margin: 2px;
+        background-color: LightGray;
+        z-index: -2;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    h1 {
+        font-size: x-large;
+        color: #999;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    h2 {
+        font-size: large;
+        color: #999;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    * section {
+        display: inline-block;
+        overflow: visible;
+        /*border: 2px dashed red;*/
+        position: relative;
+        vertical-align: bottom;
+        height: 98vh;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    article {
+        font-size: medium;
+        color: #999;
+        font-family: 'Raleway', sans-serif;
+        /*border: 1px dashed cyan;*/
+        overflow: visible;
+        margin: 10px;
+    }
+    
+    div {
+        /*border: 1px dashed orange;*/
+        overflow: visible;
+    }
+    /****************************************** ARTICLES POSITION ****/
+    
+    #main_content {
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: inline-block;
+        width: calc(100vw - 290px);
+        background-color: #484848;
+        margin: 0px;
+        padding: 0px;
+        font-size: 0;
+        z-index: 1;
+    }
+    
+    @media screen and (min-width: 1550px) {
+        #article_education {
+            position: absolute;
+            height: 480px;
+            width: 340px;
+            left: 10px;
+            bottom: 10vh;
+            border-left: 1px solid #006699;
+        }
+        #article_skills {
+            position: absolute;
+            border-left: 1px solid #ac3506;
+            height: 230px;
+            width: calc(100vw - (310px + 420px + 30px));
+            top: calc(95vh - 230px);
+            left: 390px;
+        }
+        #article_profile,
+        #article_experiences {
+            position: absolute;
+            width: calc((100vw - (310px + 420px + 30px))/2);
+        }
+        #article_profile {
+            bottom: calc(15vh + 230px);
+            left: calc(350px + 60px + ((100vw - (310px + 420px + 30px))/2));
+            border-left: 1px solid #997000;
+            height: 380px;
+        }
+        #article_experiences {
+            bottom: calc(5vh + 230px);
+            left: 390px;
+            height: 380px;
+            border-left: 1px solid #446600;
+        }
+    }
+    
+    @media screen and (min-width: 1136px) and (max-width: 1549px) {
+        #article_education {
+            position: absolute;
+            height: 340px;
+            width: 340px;
+            left: 25px;
+            /*top: calc( 155px + 140px);*/
+            top: calc( 98vh - (150px + 20px + 340px));
+            border-left: 1px solid #006699;
+        }
+        #article_skills {
+            position: absolute;
+            border-left: 1px solid #ac3506;
+            height: 120px;
+            width: calc(100vw - (310px + 30px));
+            /*top: calc( 155px + 140px + 375px + 25px);*/
+            top: calc( 98vh - 150px);
+            left: 25px;
+        }
+        #article_profile {
+            position: absolute;
+            top: 100px;
+            left: 390px;
+            border-left: 1px solid #997000;
+            height: 180px;
+            width: calc(100vw - (310px + 420px + 30px));
+        }
+        #article_experiences {
+            position: absolute;
+            /*top: calc( 155px + 200px + 10px);*/
+            top: calc( 180px + 10px + 100px);
+            width: calc(100vw - (310px + 420px + 30px));
+            left: 390px;
+            height: 250px;
+            border-left: 1px solid #446600;
+        }
+    }
+    
+    @media screen and (max-width: 1135px) {
+        #article_education {
+            display: inline-block;
+            left: 10px;
+            height: 340px;
+            width: calc(100vw - (310px + 50px));
+            border-left: 1px solid #006699;
+        }
+        #article_skills {
+            display: inline-block;
+            border-left: 1px solid #ac3506;
+            height: 120px;
+            width: calc(100vw - (310px + 50px));
+            left: 10px;
+        }
+        #article_profile {
+            margin-top: 160px;
+            display: inline-block;
+            left: 10px;
+            border-left: 1px solid #997000;
+            height: 200px;
+            width: calc(100vw - (310px + 50px));
+        }
+        #article_experiences {
+            display: inline-block;
+            width: calc(100vw - (310px + 50px));
+            left: 10px;
+            height: 320px;
+            border-left: 1px solid #446600;
+        }
+    }
+    /********************************************* CONTENT POSITIONS ***********/
+    
+    #skills_content,
+    #experiences_content,
+    #education_content {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 0px;
+        padding: 0px;
+        color: white;
+        position: absolute;
+        background-color: #484848;
+        width: calc(100vw - 100px);
+        height: 98vh;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    
+    #skills_content {
+        /*background-color: #ac3506;*/
+        left: 100px;
+        top: 200vh;
+        /*display: none;*/
+    }
+    
+    #experiences_content {
+        /*background-color: #446600;*/
+        left: 100px;
+        top: -102vh;
+        /*display: none;*/
+    }
+    
+    #education_content {
+        /*background-color: #006699;*/
+        left: -102vw;
+        top: 0px;
+        /*display: none;*/
+    }
+    /******************************************** contacts -  hobbies*/
+    
+    #section_contact_hobbies {
+        width: 280px;
+        background-color: gray;
+        /*z-index: 2;*/
+        margin: 0px;
+        padding: 0px;
+        font-size: 0;
+    }
+    
+    #div_nav_link1 {
+        display: block;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 225px;
+        /*margin-top: calc( (95vh  / 2) - 25px);*/
+        margin-top: calc( 95vh - 460px);
+        z-index: 2;
+    }
+    
+    #div_nav_link2 {
+        vertical-align: middle;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50px;
+        /*margin-top: calc( (95vh  / 2) - 25px);*/
+        margin-top: calc( 95vh - 460px);
+        display: none;
+    }
+    
+    #div_nav_link1 .img_nav {
+        width: 35px;
+        height: 35px;
+        border-radius: 25px;
+        border: 3px solid white;
+        display: inline-block;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        z-index: 2;
+    }
+    
+    #div_nav_link2 .img_nav {
+        width: 50px;
+        height: 50px;
+        border-radius: 35px;
+        border: 3px solid white;
+        display: inline-block;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        z-index: 2;
+    }
+    
+    #img_nav_home {
+        background: #484848;
+    }
+    
+    #img_ribbon_education,
+    #img_nav_education {
+        background: #00a1f1;
+    }
+    
+    #img_ribbon_experiences,
+    #img_nav_experiences {
+        background: #7cbb00;
+    }
+    
+    #img_ribbon_profile,
+    #img_nav_profil {
+        background: #ffbb00;
+    }
+    
+    #img_ribbon_skills,
+    #img_nav_skills {
+        background: #f65314;
+    }
+    
+    .contact_icon {
+        color: whitesmoke;
+    }
+    
+    #div_contact_hobbies {
+        display: block;
+        width: 100%;
+    }
+    
+    #div_experience_profile {
+        position: absolute;
+        width: 100%;
+        bottom: 5px;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #article_contact,
+    #article_hobbies {
+        border-left: 1px solid #333333;
+        border-right: 1px solid #333333;
+    }
+    
+    #article_contact li {
+        margin-bottom: 10px;
+        color: #484848;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+    #article_hobbies p {
+        text-align: center;
+    }
+    
+    #article_hobbies img {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        background-color: Gainsboro;
+        border-radius: 25px;
+        border: 2px solid #484848;
+        display: inline-block;
+        vertical-align: top;
+    }
+    /********************************************  Education */
+    
+    .timeline_year {
+        font-family: 'Droid Sans', sans-serif;
+        font-size: 20px;
+        color: #999;
+    }
+    
+    #section_education strong {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        color: #E0E0E0;
+    }
+    /********************************************  Experiences - Profiles */
+    
+    @media screen and (min-width: 1550px) {
+        #time_experiences img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            vertical-align: middle;
+        }
+        #time_experiences p {
+            /*display: inline-block;*/
+            line-height: 50px;
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    
+    @media screen and (max-width: 1549px) {
+        #time_experiences img {
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+            vertical-align: middle;
+        }
+        #time_experiences p {
+            /*display: inline-block;*/
+            line-height: 35px;
+            height: 35px;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    /******************************************** Skills */
+    
+    @media screen and (min-width: 1550px) {
+        .img_skill {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: Gainsboro;
+            border-radius: 25px;
+            border: 2px solid gray;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #img_english {
+            display: inline-block;
+            height: 50px;
+            vertical-align: middle;
+        }
+        #line_brk {
+            display: block;
+            height: 0px;
+            width: 0px;
+        }
+    }
+    
+    @media screen and (max-width: 1549px) {
+        .img_skill {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            background-color: Gainsboro;
+            border-radius: 15px;
+            border: 2px solid gray;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #img_english {
+            display: inline-block;
+            height: 30px;
+            vertical-align: middle;
+        }
+        #line_brk {
+            display: none;
+        }
+    }
+    
+    #msg_skills,
+    #progwin_skills,
+    #envBdd_skills,
+    #progwin_skills,
+    #progweb_skills {
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    #div_article_skills {
+        position: relative;
+    }
+    
+    #english_skills {
+        position: absolute;
+        display: inline-block;
+        bottom: 5px;
+        right: 5px;
+    }
+    /******************************************** Photo - ID*/
+    
+    .main_ribbon {
+        position: relative;
+        overflow: visible;
+        width: 100%;
+        font-weight: x-large;
+        font-family: 'Droid Sans', sans-serif;
+        font-size: 26px;
+        color: white;
+        line-height: 60px;
+        height: 60px;
+        background: #636d7c;
+        display: inline-block;
+    }
+    
+    .main_ribbon:before,
+    .main_ribbon:after {
+        content: '.';
+        text-indent: -9999em;
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 30px;
+        position: absolute;
+        left: -56px;
+        /*top: 10px;*/
+        display: block;
+        /*z-index: 3;*/
+    }
+    
+    .main_ribbon:before {
+        border-color: #636d7c #636d7c #636d7c transparent;
+        /*bg color for left side of ribbon */
+    }
+    
+    .main_ribbon:after {
+        border-color: transparent transparent transparent #636d7c;
+        /* bg color for right side of ribbon */
+        right: -58px;
+        top: 0;
+        left: auto;
+    }
+    
+    #time_education li:before {
+        background: none repeat scroll 0% 0% #00a1f1;
+    }
+    
+    #time_experiences li:before {
+        background: none repeat scroll 0% 0% #7cbb00;
+    }
+    
+    @media screen and (min-width: 1550px) {
+        #section_photo_name {
+            position: absolute;
+            overflow: visible;
+            left: calc(280px - 70px);
+            top: 75px;
+            z-index: 3;
+            height: auto;
+            transition: left 0.5s;
+        }
+        #img_photoid {
+            position: fixed;
+            top: 50px;
+            left: calc(280px - 60px);
+            width: 125px;
+            height: 125px;
+            z-index: 4;
+            border-radius: 64px;
+            border: 4px solid whitesmoke;
+        }
+        .main_ribbon a {
+            display: inline-block;
+            padding-left: 200px;
+            margin-right: 25px;
+        }
+    }
+    
+    @media screen and (max-width: 1549px) {
+        #section_photo_name {
+            position: absolute;
+            overflow: visible;
+            left: calc(280px / 4);
+            top: 40px;
+            z-index: 3;
+            height: auto;
+            transition: left 0.5s;
+        }
+        #img_photoid {
+            position: fixed;
+            top: 30px;
+            left: calc((280px / 2) - 40px);
+            width: 80px;
+            height: 80px;
+            z-index: 4;
+            border-radius: 64px;
+            border: 4px solid whitesmoke;
+            transition: left 0.5s;
+        }
+        .main_ribbon a {
+            display: inline-block;
+            padding-left: 125px;
+            margin-right: 25px;
+        }
+    }
+    /************************* CONTACT HOBBIES ribbon small */
+    
+    .ribbon_small {
+        position: relative;
+        left: -10px;
+        top: 10px;
+        width: calc(100% + 20px);
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'Raleway', sans-serif;
+        line-height: 36px;
+        height: 36px;
+        background: #484848;
+    }
+    
+    .ribbon_small a::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 36px;
+        height: 0;
+        width: 0;
+        border-top: 10px solid #333333;
+        border-left: 10px solid transparent;
+    }
+    
+    .ribbon_small a::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 36px;
+        right: 0px;
+        height: 0;
+        width: 0;
+        border-top: 10px solid #333333;
+        border-right: 10px solid transparent;
+    }
+    /* Shadow line bottom ribbon */
+    
+    .ribbon_small::after {
+        content: "";
+        height: 3px;
+        background: rgba(0, 0, 0, .3);
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 9px;
+        right: 9px;
+    }
+    
+    .ribbon_small a {
+        color: #fff;
+        text-decoration: none;
+        vertical-align: middle;
+        margin-left: 80px;
+    }

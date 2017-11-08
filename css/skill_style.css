@@ -1,0 +1,221 @@
+#div_skill_details #skillDetails {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: calc( 100vw - 60px - 100px - 160px);
+    max-height: calc(95vh - 150px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*font-size: 0px;*/
+}
+
+#div_skill_details .skillHeader {
+    width: calc( 100vw / 2);
+    /*border: 1px dashed cyan;*/
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+    left: 35px;
+    top: 15px;
+    height: 40px;
+}
+
+#div_skill_details .skillHeader div {
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+    line-height: 40px;
+    font-size: 26px;
+}
+
+#div_skill_details #fillerIconTitle {
+    width: 70px;
+    height: 40px;
+    background-color: #f65314;
+}
+
+#div_skill_details .skillTitle {
+    vertical-align: middle;
+    background-color: #f65314;
+    color: whitesmoke;
+    height: 40px;
+    width: 200px;
+    height: 40px;
+}
+
+#div_skill_details .skillTitle p {
+    margin-left: 20px;
+}
+
+#div_skill_details .skillIconContainer {
+    position: absolute;
+    z-index: 1;
+}
+
+#div_skill_details .imgSkillIconHeader {
+    width: 70px;
+    height: 70px;
+    border-radius: 45px;
+    border: 3px solid #f65314;
+    background: white;
+}
+
+#div_skill_details #fillerRate {
+    border-top: 40px solid #f65314;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+}
+
+#div_skill_details .detailsList {
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#div_skill_details .rate {
+    background-color: #f65314;
+    display: inline-block;
+    /*padding: 0 10px;*/
+    vertical-align: middle;
+    height: 40px;
+}
+
+#div_skill_details .rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+#div_skill_details .rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #484848;
+}
+
+#div_skill_details .rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+#div_skill_details .rate>input:checked~label {
+    color: white;
+}
+
+
+/*. {
+    border: 1px dashed green;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    display: block;
+    top: 50px;
+}*/
+
+
+/*.experienceLine {
+    display: inline-block;
+    width: 250px;
+    height: 3px;
+    background: #7cbb00;
+    /*border-bottom: 3px solid #7cbb00;
+    }*/
+
+#div_skill_details #skillExpIcon,
+#div_skill_details #skillDipIcon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border: 3px solid white;
+    background: #7cbb00;
+}
+
+#div_skill_details #skillDipIcon {
+    background: #00a1f1;
+}
+
+#div_skill_details div.expHeader,
+#div_skill_details div.dipHeader {
+    height: 60px;
+    border: 0px;
+    margin-top: 90px;
+    padding: 0;
+    vertical-align: top;
+    text-align: center;
+}
+
+#div_skill_details div.dipHeader {
+    margin-top: 50px;
+}
+
+#div_skill_details div.ex,
+#div_skill_details div.dip {
+    width: 250px;
+    height: 3px;
+    background: #7cbb00;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#div_skill_details div.dip {
+    background: #00a1f1;
+}
+
+#div_skill_details div.ex2,
+#div_skill_details div.dip2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    vertical-align: middle;
+}
+
+#div_skill_details .skillIcon {
+    width: 70px;
+    height: 70px;
+    background-color: whitesmoke;
+    border-radius: 35px;
+}
+
+#verticalCarousel {
+    /*border: 1px dashed red;*/
+    height: calc(100vh - 150px - 60px);
+    width: 80px;
+    margin: 150px 10px 0px 10px;
+    display: table;
+}
+
+.vc_goDown,
+.vc_goUp {
+    width: 70px;
+    /*border: 1px dashed blue;*/
+    text-align: center;
+    position: relation;
+    margin: 5px auto;
+}
+
+.vc_goDown a,
+.vc_goUp a {
+    color: whitesmoke;
+}
+
+.carouselBody {
+    position: relative;
+    left: 4px;
+}
+
+.SkillLink {
+    margin: 5px auto;
+}
+
+.centerme {
+    display: table-cell;
+    vertical-align: middle;
+}
